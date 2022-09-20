@@ -2,8 +2,26 @@ import React from 'react'
 import './contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {BsWhatsapp} from 'react-icons/bs'
+import {useRef} from 'react'
+import emailjs from 'emailjs-com'
+
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_blh5iqm', 'template_1k4toxr', form.current, 's78y_lGNNKxNmiB9Q')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
+
   return (
     <section id='contact'>
       <h2>Contáctame</h2>
@@ -24,11 +42,11 @@ const Contact = () => {
           </article>
         </div>
 
-        <form action="" className='form__message'>
+        <form ref={form} onSubmit={sendEmail} className='form__message' id="formul">
           <input type="text" name="name" id="" placeholder='Escribe tu nombre completo' required/>
           <input type="text" name="email" id="" placeholder='Escribe tu email' required/>
           <textarea name="message" id="" rows="10" placeHolder ='Tu mensaje' required></textarea>
-          <button type='submit' className='btn btn-primary'>Enviar mensaje</button>
+          <button type='submit' value="send" className='btn btn-primary'>Enviar mensaje</button>
         </form>
       </div>
     </section>
