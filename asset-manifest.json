@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mi-Portafolio/static/css/main.4a8f582a.css",
+    "main.js": "/Mi-Portafolio/static/js/main.8dd377f6.js",
+    "static/media/Foto.JPG": "/Mi-Portafolio/static/media/Foto.2a5b59d3f55c32be7e1b.JPG",
+    "static/media/CV.pdf": "/Mi-Portafolio/static/media/CV.eb917913b4bb27af861b.pdf",
+    "index.html": "/Mi-Portafolio/index.html",
+    "main.4a8f582a.css.map": "/Mi-Portafolio/static/css/main.4a8f582a.css.map",
+    "main.8dd377f6.js.map": "/Mi-Portafolio/static/js/main.8dd377f6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a8f582a.css",
+    "static/js/main.8dd377f6.js"
+  ]
+}
